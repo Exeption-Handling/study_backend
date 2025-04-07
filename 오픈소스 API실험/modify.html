@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulletin Board</title>
+</head>
+<body>
+    <h1>글 작성하기</h1>
+    <form action="/posts/{{post.id}}" method="post">
+        <input type="hidden" name="_method", value="modify">
+        <h1 for="title">글 제목</h1>
+        <input id="title" type="text" name="title"> 
+        <br>
+        <h2>글 내용</h2>
+        <textarea id="content" name="content" rows="10" cols="40"></textarea>
+        <button type="submit">수정</button>
+    </form>
+    
+</body>
+</html>

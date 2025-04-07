@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulletin Board</title>
+</head>
+<body>
+    <h1>회원 가입</h1>
+    {% if error_message %}
+        <div style="color : red; font-weight : bold;">
+            {{error_message}}
+        </div>
+    {% endif %}
+    <form action="/sign_up/process" method="post">
+        <h1 for="Uid">아이디</h1>
+        <input id="Uid" type="text" name="Uid" required> 
+        <br>
+        <h1 for="username">닉네임</h1>
+        <input id="username" type="text" name="username" required> 
+        <br>
+        <h1 for="password">비밀번호</h1>
+        <input id="password" type="text" name="password" required>
+        <br>
+        <button>가입</button>
+    </form>
+    
+</body>
+</html>

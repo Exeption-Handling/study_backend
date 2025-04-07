@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulletin Board</title>
+</head>
+<body>
+    <h1>{{post.title}}</h1>
+    <h3>{{post.content}}</h3>
+    <form action="/" method="get">
+        <button>홈으로 돌아가기</button>
+    </form>
+
+
+    <form action="/posts/{{ post.id }}" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button type="submit">글 삭제하기</button>
+    </form>
+
+
+    <form action="/modify/{{post.id}}" method="get">
+        <button>글 수정하기</button>
+    </form>
+</body>
+</html>

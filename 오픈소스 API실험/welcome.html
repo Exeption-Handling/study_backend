@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulletin Board</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    {% if login_success %}
+        <div style="color : blue; font-weight : bold;">
+            {{login_success}}
+        </div>
+    {% endif %}
+    {% if signup_success %}
+        <div style="color : blue; font-weight : bold;">
+            {{signup_success}}
+        </div>
+    {% endif %}
+    {% if logout_success %}
+        <div style="color : blue; font-weight : bold;">
+            {{logout_success}}
+        </div>
+    {% endif %}
+    {% if no_permission %}
+        <div style="color : red; font-weight : bold;">
+            {{no_permission}}
+        </div>
+    {% endif %}
+    <form action="/posts/" method="get">
+        <button>전체 글 보기</button>
+    </form>
+    <form action="/create/" method="get">
+        <button>글 쓰기</button>
+    </form>
+    {% if not whether_login %}
+    <form action="/login/" method="get">
+        <button>로그인</button>
+    </form>
+    {% else %}
+    <form action="/logout/" method="post">
+       <button>로그아웃</button>
+    </form>
+    {% endif %}
+    <form action="/sign_up/" method="get">
+        <button>회원 가입</button>
+    </form>
+    
+</body>
+</html>
