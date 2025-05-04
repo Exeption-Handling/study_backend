@@ -1,4 +1,12 @@
-# study_backend
+## Team Members
+- 문서영 (leader, frontend)
+- 박성웅 (backend)
+- 천지성 (idea, data)
+- 전용준 (database)
 
-# 프로젝트 구현을 위한 백엔드 공부 중 만든 게시판 API
-# 기능 확인을 위한 구현이라 자세히 구현하지 않고 작동 여부만 확인하는 식으로 작성함
+## Master Node
+- 문서영 (Exeption-Handling 노드)
+
+- 기본 백엔드 구현을 위한 게시판 API로 실험
+- 데이터베이스 연동을 해놨지만 포트포워딩을 통한 공유 데이터베이스 실험이 필요.
+- Warming Warning!
